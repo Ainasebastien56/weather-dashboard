@@ -7,13 +7,13 @@ import { HttpClient } from '@angular/common/http';
 export class WeatherService {
   private apiKey1 = 'd6a3c0062595cef597a06bfd243c62a7';
   private apiKey2 = '984a86c262154b129a9181358242108 ';
-  private apiUrl = 'http://api.weatherapi.com/v1';
+  private apiUrl = 'https://api.weatherapi.com/v1';
 
   constructor(private http: HttpClient) { }
 
 
   getGeoLocalisation(query: string){
-    return this.http.get<any>(`http://api.openweathermap.org/geo/1.0/direct?q=${query}&limit=5&appid=${this.apiKey1}`)
+    return this.http.get<any>(`https://api.openweathermap.org/geo/1.0/direct?q=${query}&limit=5&appid=${this.apiKey1}`)
   }
 
   getCurrentWeather(loc:any){
@@ -37,7 +37,7 @@ export class WeatherService {
   }
 
  getWeatherByCoordinates(lat:any, lon:any){
-    return this.http.get<any>('http://api.openweathermap.org/data/2.5/weather',{
+    return this.http.get<any>('https://api.openweathermap.org/data/2.5/weather',{
                     params:{
                         lat:lat,
                         lon :lon,
