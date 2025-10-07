@@ -1,0 +1,13 @@
+<div class="w-full p-5 h-80 bg-white shadow-lg rounded-xl">
+  <h2 class="text-lg font-bold mb-5">3-Day Forecast</h2>
+  <div class="flex flex-row items-center justify-between mb-5" *ngFor="let f of forecastdays">
+    <p class="flex gap-2 items-center">
+      <img width="40px" [src]="f.icon" alt="weather-icon">
+      <span>{{f.label}}</span>
+    </p>
+    <p class="flex gap-2">
+      <span class="text-gray-600 text-sm">{{f.text}}</span>
+      <span class="ftext-gray-600"><b>{{f.maxtemp | number:'1.0-0' }}°</b>  / {{f.mintemp | number:'1.0-0'}}°</span>
+    </p>
+  </div>
+</div>

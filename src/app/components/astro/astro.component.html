@@ -1,0 +1,27 @@
+<div class="w-full h-84  shadow-lg rounded-xl bg-white p-5">
+  <h2 class="text-lg font-bold mb-5">Sun & Moon</h2>
+   <div class="flex flex-col gap-5">
+      <div class="flex justify-between">
+        <div class="flex gap-2">
+          <fa-icon [icon]="faSun" class="text-orange-500"/>
+          <p class="text-gray-600">Sunrise</p>
+        </div>
+        <p class="font-bold">{{astroInfo?.sunrise}}</p>
+      </div>
+      <div class="flex justify-between">
+        <div class="flex gap-2">
+          <fa-icon [icon]="faMoon" class="text-blue-500"/>
+          <p class="text-gray-600">Sunset</p>
+        </div>
+        <p class="font-bold">{{astroInfo?.sunset}}</p>
+      </div>
+
+      <div class="flex justify-between">
+        <div class="flex gap-2">
+          <fa-icon [icon]="faCircle" class="text-gray-500"/>
+          <p class="text-gray-600">Moon Phase</p>
+        </div>
+        <p class="font-bold">{{astroInfo?.moon_phase}}</p>
+      </div>
+   </div>
+</div>
