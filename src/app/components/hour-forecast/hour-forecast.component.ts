@@ -61,7 +61,6 @@ export class HourForecastComponent implements OnInit{
     },
     options: {
       responsive: true,
-      animation: false,  // <-- stoppe l'animation
       plugins: { legend: { display: true } },
       scales: {
         x: { title: { display: true, text: 'Time' } },
